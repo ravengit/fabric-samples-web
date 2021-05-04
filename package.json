@@ -1,0 +1,24 @@
+{
+  "name": "fabric-samples-web",
+  "version": "1.0.0",
+  "description": "Web application for Fabirc Samples",
+  "main": "server.js",
+  "scripts": {
+    "watch": "nodemon ./server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@ravenpod/ravenpod-web-dc": "^1.0.2",
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "fabric-ca-client": "2.2.1",
+    "fabric-network": "2.2.1",
+    "faker": "^5.5.3",
+    "js-yaml": "^3.14.0",
+    "uuid": "^8.3.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}
