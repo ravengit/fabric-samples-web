@@ -2,6 +2,7 @@ const { Wallet, Wallets, Gateway } = require('fabric-network');
 const FabricCAServices = require('fabric-ca-client');
 const Constants = require('../config/constants')
 const fs = require('fs');
+const rimraf = require("rimraf");
 
 const funcs = {
 
@@ -27,6 +28,7 @@ const funcs = {
     
     buildWallet: async () => {
         let walletPath = Constants.WALLET_PATH
+        rimraf.sync(walletPath);
         let wallet = new Wallet();
         if (walletPath) {
             wallet = await Wallets.newFileSystemWallet(walletPath);
