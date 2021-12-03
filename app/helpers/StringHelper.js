@@ -1,7 +1,11 @@
 const funcs = {
 
     toJSONObject: (buffer) => {
-        return JSON.parse(buffer.toString())
+        try {
+            return JSON.parse(buffer.toString())
+        } catch(e) {
+            return buffer.toString()
+        }        
     },
 
 }
